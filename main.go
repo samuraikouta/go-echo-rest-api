@@ -20,5 +20,5 @@ func main() {
 	userController := controller.NewUserController(userUsecase)
 	taskController := controller.NewTaskController(taskUsecase)
 	e := router.NewRouter(userController, taskController)
-	e.Logger.Fatal(e.Start(":8080"))
+	e.Logger.Fatal(e.Start("localhost:8080"))
 }
